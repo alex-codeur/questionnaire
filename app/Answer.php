@@ -12,4 +12,9 @@ class Answer extends Model
     {
         return $this->belognsTo(Question::class);
     }
+
+    public function responses()
+    {
+        return $this->hasMany(SurveyResponses::class);
+    }
 }
